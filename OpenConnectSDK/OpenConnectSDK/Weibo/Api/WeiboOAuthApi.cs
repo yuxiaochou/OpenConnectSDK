@@ -62,7 +62,9 @@ namespace OpenConnectSDK.Weibo.Api
         public static WeiboOAuthToken GetAccessToken(string appId, string secret, string redirectUrl, string code, string grantType = "authorization_code")
         {
             var url =
-                string.Format("https://api.weibo.com/oauth2/access_token?client_id={0}&client_secret={1}&code={2}&grant_type={3}}&redirect_uri={4}",
+                "https://api.weibo.com/oauth2/access_token";
+
+            string strPostData = string.Format("client_id={0}&client_secret={1}&code={2}&grant_type={3}&redirect_uri={4}",
                                 appId, secret, code, grantType, HttpUtility.UrlEncode(redirectUrl));
 
             /* 如果成功返回，即可在返回包中获取到Access Token。
@@ -70,7 +72,7 @@ namespace OpenConnectSDK.Weibo.Api
              * expires_in是该access token的有效期，单位为秒。
              */
 
-            string response = WebClientHelper.GetMethod(url);
+            string response = WebClientHelper.PostMethod(url, strPostData);
 
             JObject jsonObj = JObject.Parse(response);
 

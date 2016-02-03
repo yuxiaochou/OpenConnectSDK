@@ -27,5 +27,53 @@ namespace OpenConnectSDK.Helpers
                 return ex.Message;
             }
         }
+
+        /// <summary>
+        /// Post方法
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="postData"></param>
+        /// <returns></returns>
+        public static string PostMethod(string url, Dictionary<string, string> postData)
+        {
+            StringBuilder strPostData = new StringBuilder();
+            foreach (var item in postData)
+            {
+                if (strPostData.Length > 0)
+                {
+                    strPostData.Append("&");
+                }
+                strPostData.Append(item.Key + "=" + item.Value);
+            }
+
+            return PostMethod(url, strPostData.ToString());
+        }
+
+        /// Post方法
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="strPostData">格式为name=张三&sex=男</param>
+        /// <returns></returns>
+        public static string PostMethod(string url, string strPostData)
+        {
+            try
+            {
+                string result = string.Empty;
+
+                WebClient wc = new WebClient();
+
+                // 采取POST方式必须加的Header
+                wc.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+
+                byte[] postBytes = Encoding.UTF8.GetBytes(strPostData.ToString());
+                byte[] responseData = wc.UploadData(url, "POST", postBytes); // 得到返回字符流
+                return Encoding.UTF8.GetString(responseData);// 解码     
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
     }
 }
