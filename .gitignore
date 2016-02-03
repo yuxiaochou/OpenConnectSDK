@@ -1,0 +1,4 @@
+*.suo
+/OpenConnectSDK/packages
+/OpenConnectSDK/OpenConnectSDK/bin
+/OpenConnectSDK/OpenConnectSDK/obj
