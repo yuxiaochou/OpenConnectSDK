@@ -14,7 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{F5CE828E-E251-4711-A0EA-4153E9E250E7}"
 	ProjectSection(SolutionItems) = preProject
 		nuget\OpenConnectSDK.0.0.1.nupkg = nuget\OpenConnectSDK.0.0.1.nupkg
-		nuget\OpenConnectSDK.nuspec = nuget\OpenConnectSDK.nuspec
+		nuget\OpenConnectSDK.0.0.2.nupkg = nuget\OpenConnectSDK.0.0.2.nupkg
 	EndProjectSection
 EndProject
 Global
