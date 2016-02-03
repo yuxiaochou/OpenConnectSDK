@@ -54,7 +54,7 @@ namespace OpenConnectSDK.QQ.Api
         public static QQOAuthToken GetAccessToken(string appId, string secret, string redirectUrl, string code, string grantType = "authorization_code")
         {
             var url =
-                string.Format("https://graph.qq.com/oauth2.0/token?client_id={0}&client_secret={1}&code={2}&grant_type={3}}&redirect_uri={4}",
+                string.Format("https://graph.qq.com/oauth2.0/token?client_id={0}&client_secret={1}&code={2}&grant_type={3}&redirect_uri={4}",
                                 appId, secret, code, grantType, HttpUtility.UrlEncode(redirectUrl));
 
             /* 如果成功返回，即可在返回包中获取到Access Token。
