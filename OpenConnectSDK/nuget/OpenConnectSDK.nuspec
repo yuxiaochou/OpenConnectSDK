@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>OpenConnectSDK</id>
+    <version>0.0.1</version>
+    <title></title>
+    <authors>YuXiaochou</authors>
+    <owners>YuXiaochou</owners>
+    <licenseUrl>https://github.com/yuxiaochou/OpenConnectSDK/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/yuxiaochou/OpenConnectSDK</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>QQConnect and WeiboConnect SDK</description>
+    <releaseNotes>QQConnect and WeiboConnect SDK</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>QQ Weibo</tags>
+  </metadata>
+</package>
