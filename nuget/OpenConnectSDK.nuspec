@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>OpenConnectSDK</id>
+        <version>0.0.5</version>
+        <title>OpenConnectSDK</title>
+        <authors>YuXiaochou</authors>
+        <licenseUrl>https://github.com/yuxiaochou/OpenConnectSDK/blob/master/LICENSE.md</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>QQConnect and WeiboConnect SDK</description>
+        <summary>QQConnect and WeiboConnect SDK</summary>
+        <releaseNotes>https://github.com/yuxiaochou/OpenConnectSDK</releaseNotes>
+        <dependencies>
+            <dependency id="Newtonsoft.Json" version="8.0.2" />
+        </dependencies>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System.Web" targetFramework="" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="..\OpenConnectSDK\OpenConnectSDK\bin\Debug\OpenConnectSDK.dll" target="lib\net45\OpenConnectSDK.dll" />
+        <file src="..\OpenConnectSDK\OpenConnectSDK\bin\Debug\OpenConnectSDK.XML" target="lib\net45\OpenConnectSDK.XML" />
+    </files>
+</package>
