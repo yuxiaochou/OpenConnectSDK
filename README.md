@@ -6,6 +6,7 @@ QQConnect and WeiboConnect SDK
 
 -----------------
 
+[![Build](https://ci.appveyor.com/api/projects/status/github/YuXiaochou/OpenConnectSDK?branch=master&svg=true)](https://ci.appveyor.com/project/yuxiaochou/openconnectsdk/branch/master)
 [![NuGet](http://img.shields.io/nuget/v/OpenConnectSDK.svg?style=flat)](https://www.nuget.org/packages/OpenConnectSDK/)
 [![Downloads](https://img.shields.io/nuget/dt/OpenConnectSDK.svg)](https://www.nuget.org/packages/OpenConnectSDK/)
 
