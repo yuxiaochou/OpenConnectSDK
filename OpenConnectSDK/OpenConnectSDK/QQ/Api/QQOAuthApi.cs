@@ -11,6 +11,9 @@ using System.Web;
 
 namespace OpenConnectSDK.QQ.Api
 {
+    /// <summary>
+    /// QQ互联OAuth2授权Api
+    /// </summary>
     public class QQOAuthApi
     {
         /// <summary>

@@ -33,10 +33,18 @@ namespace OpenConnectSDK.Weibo.Entities
         apponweibo,
     }
 
-
+    /// <summary>
+    /// 微博授权页语言
+    /// </summary>
     public enum Language
     {
+        /// <summary>
+        /// 中文简体
+        /// </summary>
         zh_CN,
+        /// <summary>
+        /// 英文（英文版测试中，开发者任何意见可反馈至 @微博API）
+        /// </summary>
         en
     }
 }

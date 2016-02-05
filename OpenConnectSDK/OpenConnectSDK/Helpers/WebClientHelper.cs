@@ -8,8 +8,16 @@ using System.Threading.Tasks;
 
 namespace OpenConnectSDK.Helpers
 {
+    /// <summary>
+    /// WebClient帮助类，用户于ttp交互
+    /// </summary>
     public class WebClientHelper
     {
+        /// <summary>
+        /// Get方法
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public static string GetMethod(string url)
         {
             try
@@ -48,7 +56,7 @@ namespace OpenConnectSDK.Helpers
 
             return PostMethod(url, strPostData.ToString());
         }
-
+        /// <summary>
         /// Post方法
         /// </summary>
         /// <param name="url"></param>

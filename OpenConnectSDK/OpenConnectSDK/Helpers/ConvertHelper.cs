@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace OpenConnectSDK.Helpers
 {
+    /// <summary>
+    /// 安全类型转换帮助类
+    /// </summary>
     public class ConvertHelper
     {
+        /// <summary>
+        /// Int型默认值
+        /// </summary>
         public static int DefaultInt
         {
             get
@@ -15,7 +21,9 @@ namespace OpenConnectSDK.Helpers
                 return 0;
             }
         }
-
+        /// <summary>
+        /// Long型默认值
+        /// </summary>
         public static long DefaultLong
         {
             get
@@ -23,7 +31,9 @@ namespace OpenConnectSDK.Helpers
                 return 0;
             }
         }
-
+        /// <summary>
+        /// 日期时间默认值
+        /// </summary>
         public static DateTime DefaultDateTime
         {
             get
@@ -32,7 +42,9 @@ namespace OpenConnectSDK.Helpers
             }
         }
 
-
+        /// <summary>
+        /// Guid默认值
+        /// </summary>
         public static Guid DefaultGuid
         {
             get
@@ -40,7 +52,9 @@ namespace OpenConnectSDK.Helpers
                 return Guid.Empty;
             }
         }
-
+        /// <summary>
+        /// Decimal型默认值
+        /// </summary>
         public static Decimal DefaultDecimal
         {
             get
@@ -48,7 +62,9 @@ namespace OpenConnectSDK.Helpers
                 return new Decimal(0);
             }
         }
-
+        /// <summary>
+        /// Bool型默认值
+        /// </summary>
         public static bool DefaultBool
         {
             get
@@ -56,7 +72,12 @@ namespace OpenConnectSDK.Helpers
                 return false;
             }
         }
-
+        /// <summary>
+        /// 将String型转换成Int型，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static int ToInt(string s, int defaultValue)
         {
             int tempInt = DefaultInt;
@@ -69,12 +90,22 @@ namespace OpenConnectSDK.Helpers
                 return defaultValue;
             }
         }
+        /// <summary>
+        /// 将String型转换成Int型，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static int ToInt(string s)
         {
             return ToInt(s, DefaultInt);
         }
 
-
+        /// <summary>
+        /// 将String型转换成Long型，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static long ToLong(string s, long defaultValue)
         {
             long tempLong = DefaultInt;
@@ -87,12 +118,23 @@ namespace OpenConnectSDK.Helpers
                 return defaultValue;
             }
         }
+
+        /// <summary>
+        /// 将String型转换成Long型，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static long ToLong(string s)
         {
             return ToLong(s, DefaultLong);
         }
 
-
+        /// <summary>
+        /// 将String型转换成DateTime，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static DateTime ToDateTime(string s, DateTime defaultValue)
         {
             DateTime tempDate = DefaultDateTime;
@@ -106,7 +148,7 @@ namespace OpenConnectSDK.Helpers
             }
         }
         /// <summary>
-        /// 默认值是1970-01-01
+        /// 将String型转换成DateTime，失败返回默认值,默认值是1970-01-01
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
@@ -116,7 +158,12 @@ namespace OpenConnectSDK.Helpers
         }
 
 
-
+        /// <summary>
+        /// 将String型转换成Guid，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static Guid ToGuid(string s, Guid defaultValue)
         {
             Guid tempGuid = DefaultGuid;
@@ -130,14 +177,23 @@ namespace OpenConnectSDK.Helpers
             }
         }
 
-
+        /// <summary>
+        /// 将String型转换成Guid，失败返回默认值，默认值是Guid.Empty
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static Guid ToGuid(string s)
         {
             return ToGuid(s, DefaultGuid);
         }
 
 
-
+        /// <summary>
+        /// 将String型转换成Decimal，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static Decimal ToDecimal(string s, Decimal defaultValue)
         {
             Decimal tempDecimal = DefaultDecimal;
@@ -150,13 +206,22 @@ namespace OpenConnectSDK.Helpers
                 return defaultValue;
             }
         }
-
+        /// <summary>
+        /// 将String型转换成Decimal，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static Decimal ToDecimal(string s)
         {
             return ToDecimal(s, DefaultDecimal);
         }
 
-
+        /// <summary>
+        /// 将String型转换成Bool型，失败返回默认值
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static bool ToBool(string s, bool defaultValue)
         {
             bool tempBool = DefaultBool;
@@ -171,7 +236,7 @@ namespace OpenConnectSDK.Helpers
         }
 
         /// <summary>
-        /// 默认值是false
+        /// 将String型转换成Bool型，失败返回默认值，默认值是false
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>

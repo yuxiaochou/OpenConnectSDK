@@ -10,6 +10,9 @@ using System.Web;
 
 namespace OpenConnectSDK.Weibo.Api
 {
+    /// <summary>
+    /// 微博用户Api
+    /// </summary>
     public class WeiboUserApi
     {
         /// <summary>

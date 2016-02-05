@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OpenConnectSDK.QQ.Entities
 {
+    /// <summary>
+    /// QQ用户信息（主要来自QQ空间）
+    /// </summary>
     public class QQUserInfo
     {
 

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OpenConnectSDK.Weibo.Entities
 {
+    /// <summary>
+    /// 微博OAuth2验证票据
+    /// </summary>
     public class WeiboOAuthToken
     {
         /// <summary>

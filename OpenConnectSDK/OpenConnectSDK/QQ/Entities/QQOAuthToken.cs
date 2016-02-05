@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OpenConnectSDK.QQ.Entities
 {
+    /// <summary>
+    /// QQ互联OAuth2验证票据
+    /// </summary>
     public class QQOAuthToken
     {
         /// <summary>

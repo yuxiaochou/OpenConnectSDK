@@ -10,17 +10,22 @@ using System.Web;
 
 namespace OpenConnectSDK.Weibo.Api
 {
+    /// <summary>
+    /// 微博OAuth2授权Api
+    /// </summary>
     public class WeiboOAuthApi
     {
         /// <summary>
         /// 获取验证地址
+        /// 文档：http://open.weibo.com/wiki/Oauth2/authorize
         /// </summary>
-        /// <param name="appId"></param>
-        /// <param name="redirectUrl"></param>
-        /// <param name="state"></param>
-        /// <param name="scope"></param>
-        /// <param name="responseType"></param>
-        /// <param name="display"></param>
+        /// <param name="appId">申请应用时分配的AppKey</param>
+        /// <param name="redirectUrl">授权回调地址</param>
+        /// <param name="state">用于保持请求和回调的状态，在回调时，会在Query Parameter中回传该参数</param>
+        /// <param name="scope">申请scope权限所需参数，可一次申请多个scope权限，用逗号分隔</param>
+        /// <param name="display">授权页面的终端类型</param>
+        /// <param name="forceLogin">是否强制用户重新登录，true：是，false：否。默认false。</param>
+        /// <param name="language">授权页语言，缺省为中文简体版，en为英文版</param>
         /// <returns></returns>
         public static string GetAuthorizeUrl(string appId, string redirectUrl, string state = "", string scope = "",
             WeiboAuthorizeDisplay display = WeiboAuthorizeDisplay.Default, bool forceLogin = false,

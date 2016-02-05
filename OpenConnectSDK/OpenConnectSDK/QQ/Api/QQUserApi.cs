@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 
 namespace OpenConnectSDK.QQ.Api
 {
+    /// <summary>
+    /// QQ用户信息Api
+    /// </summary>
     public class QQUserApi
     {
         /// <summary>
-        /// 获取用户信息
+        /// 获取用户信息（主要来自QQ空间）
         /// </summary>
         /// <param name="appId"></param>
         /// <param name="accessToken"></param>

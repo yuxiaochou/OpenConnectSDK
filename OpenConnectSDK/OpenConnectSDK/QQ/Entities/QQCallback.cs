@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OpenConnectSDK.QQ.Entities
 {
+    /// <summary>
+    /// QQ返回OpenID的数据结构
+    /// </summary>
     public class QQCallback
     {
         /// <summary>
