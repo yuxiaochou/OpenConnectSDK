@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace OpenConnectSDK.Helpers
 {
     /// <summary>
-    /// WebClient帮助类，用户于ttp交互
+    /// WebClient帮助类，用于http交互
     /// </summary>
     public class WebClientHelper
     {
@@ -60,7 +60,7 @@ namespace OpenConnectSDK.Helpers
         /// Post方法
         /// </summary>
         /// <param name="url"></param>
-        /// <param name="strPostData">格式为name=张三&sex=男</param>
+        /// <param name="strPostData">格式为name=张三&amp;sex=男</param>
         /// <returns></returns>
         public static string PostMethod(string url, string strPostData)
         {

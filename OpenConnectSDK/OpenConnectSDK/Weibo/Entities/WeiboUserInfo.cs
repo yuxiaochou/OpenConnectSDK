@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OpenConnectSDK.Weibo.Entities
 {
     /// <summary>
-    /// 用户信息（不包含最近一条微博）
+    /// 微博用户信息（不包含最近一条微博）
     /// </summary>
     public class WeiboUserInfo
     {

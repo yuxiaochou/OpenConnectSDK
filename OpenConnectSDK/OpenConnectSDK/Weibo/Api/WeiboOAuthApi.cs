@@ -16,7 +16,7 @@ namespace OpenConnectSDK.Weibo.Api
     public class WeiboOAuthApi
     {
         /// <summary>
-        /// 获取验证地址
+        /// 获取授权地址
         /// 文档：http://open.weibo.com/wiki/Oauth2/authorize
         /// </summary>
         /// <param name="appId">申请应用时分配的AppKey</param>
@@ -26,7 +26,7 @@ namespace OpenConnectSDK.Weibo.Api
         /// <param name="display">授权页面的终端类型</param>
         /// <param name="forceLogin">是否强制用户重新登录，true：是，false：否。默认false。</param>
         /// <param name="language">授权页语言，缺省为中文简体版，en为英文版</param>
-        /// <returns></returns>
+        /// <returns>授权地址</returns>
         public static string GetAuthorizeUrl(string appId, string redirectUrl, string state = "", string scope = "",
             WeiboAuthorizeDisplay display = WeiboAuthorizeDisplay.Default, bool forceLogin = false,
             Language language = Language.zh_CN)
@@ -57,13 +57,14 @@ namespace OpenConnectSDK.Weibo.Api
 
         /// <summary>
         /// 获取AccessToken
+        /// 文档：http://open.weibo.com/wiki/OAuth2/access_token
         /// </summary>
-        /// <param name="appId"></param>
-        /// <param name="secret"></param>
-        /// <param name="redirectUrl"></param>
-        /// <param name="code"></param>
-        /// <param name="grantType"></param>
-        /// <returns></returns>
+        /// <param name="appId">申请应用时分配的AppKey。</param>
+        /// <param name="secret">申请应用时分配的AppSecret。</param>
+        /// <param name="redirectUrl">回调地址，需需与注册应用里的回调地址一致。</param>
+        /// <param name="code">调用authorize获得的code值。</param>
+        /// <param name="grantType">请求的类型，填写authorization_code</param>
+        /// <returns>微博验证票据</returns>
         public static WeiboOAuthToken GetAccessToken(string appId, string secret, string redirectUrl, string code, string grantType = "authorization_code")
         {
             var url =

@@ -17,11 +17,12 @@ namespace OpenConnectSDK.Weibo.Api
     {
         /// <summary>
         /// 获取用户信息(参数uid与screen_name二者必选其一，且只能选其一)
+        /// 文档：http://open.weibo.com/wiki/2/users/show
         /// </summary>
-        /// <param name="accessToken"></param>
-        /// <param name="uid"></param>
-        /// <param name="screenName"></param>
-        /// <returns></returns>
+        /// <param name="accessToken">采用OAuth授权方式为必填参数，OAuth授权后获得</param>
+        /// <param name="uid">需要查询的用户ID。</param>
+        /// <param name="screenName">需要查询的用户昵称。</param>
+        /// <returns>微博用户信息（不包含最近一条微博）</returns>
         public static WeiboUserInfo GetUserInfo(string accessToken, long uid, string screenName = "")
         {
             var url =

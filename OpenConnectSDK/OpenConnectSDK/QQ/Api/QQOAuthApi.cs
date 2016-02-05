@@ -17,15 +17,16 @@ namespace OpenConnectSDK.QQ.Api
     public class QQOAuthApi
     {
         /// <summary>
-        /// 获取验证地址
+        /// 获取授权地址
+        /// 文档：http://wiki.connect.qq.com/使用authorization_code获取access_token#Step1.EF.BC.9A.E8.8E.B7.E5.8F.96AuthorizationCode
         /// </summary>
-        /// <param name="appId"></param>
-        /// <param name="redirectUrl"></param>
-        /// <param name="state"></param>
-        /// <param name="scope"></param>
-        /// <param name="responseType"></param>
-        /// <param name="display"></param>
-        /// <returns></returns>
+        /// <param name="appId">申请QQ登录成功后，分配给应用的appid</param>
+        /// <param name="redirectUrl">成功授权后的回调地址，必须是注册appid时填写的主域名下的地址。</param>
+        /// <param name="state">client端的状态值。用于第三方应用防止CSRF攻击，成功授权后回调时会原样带回。请务必严格按照流程检查用户与state参数状态的绑定</param>
+        /// <param name="scope">请求用户授权时向用户显示的可进行授权的列表。 可填写的值是API文档中列出的接口，以及一些动作型的授权（目前仅有：do_like），如果要填写多个接口名称，请用逗号隔开。Api列表见 http://wiki.connect.qq.com/api列表 </param>
+        /// <param name="responseType">授权类型，此值固定为“code”</param>
+        /// <param name="display">用于展示的样式。不传则默认展示为PC下的样式。</param>
+        /// <returns>授权地址</returns>
         public static string GetAuthorizeUrl(string appId, string redirectUrl, string state, string scope = "get_user_info",
             string responseType = "code", QQAuthorizeDisplay display = QQAuthorizeDisplay.none)
         {
@@ -47,13 +48,14 @@ namespace OpenConnectSDK.QQ.Api
 
         /// <summary>
         /// 获取AccessToken
+        /// 文档：http://wiki.connect.qq.com/使用authorization_code获取access_token#Step2.EF.BC.9A.E9.80.9A.E8.BF.87AuthorizationCode.E8.8E.B7.E5.8F.96AccessToken
         /// </summary>
-        /// <param name="appId"></param>
-        /// <param name="secret"></param>
-        /// <param name="redirectUrl"></param>
-        /// <param name="code"></param>
-        /// <param name="grantType"></param>
-        /// <returns></returns>
+        /// <param name="appId">申请QQ登录成功后，分配给网站的appid。</param>
+        /// <param name="secret">申请QQ登录成功后，分配给网站的appkey。</param>
+        /// <param name="redirectUrl">成功授权后的回调地址，必须是注册appid时填写的主域名下的地址。</param>
+        /// <param name="code">如果用户成功登录并授权，则会跳转到指定的回调地址，并在URL中带上Authorization Code。此code会在10分钟内过期。</param>
+        /// <param name="grantType">授权类型，在本步骤中，此值为“authorization_code”。</param>
+        /// <returns>QQ互联验证票据</returns>
         public static QQOAuthToken GetAccessToken(string appId, string secret, string redirectUrl, string code, string grantType = "authorization_code")
         {
             var url =
@@ -88,9 +90,10 @@ namespace OpenConnectSDK.QQ.Api
 
         /// <summary>
         /// 获取OpenID
+        /// 文档：http://wiki.connect.qq.com/获取用户openid_oauth2-0
         /// </summary>
-        /// <param name="accessToken"></param>
-        /// <returns></returns>
+        /// <param name="accessToken">用户授权时获取到的AccessToken</param>
+        /// <returns>用户的OpenID</returns>
         public static string GetOpenID(string accessToken)
         {
             var url =
@@ -107,8 +110,5 @@ namespace OpenConnectSDK.QQ.Api
             var callBack = JsonConvert.DeserializeObject<QQCallback>(strJson);
             return callBack.OpenId;
         }
-
-
     }
-
 }

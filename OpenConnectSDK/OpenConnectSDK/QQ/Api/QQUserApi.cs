@@ -16,11 +16,12 @@ namespace OpenConnectSDK.QQ.Api
     {
         /// <summary>
         /// 获取用户信息（主要来自QQ空间）
+        /// 文档：http://wiki.connect.qq.com/get_user_info
         /// </summary>
-        /// <param name="appId"></param>
-        /// <param name="accessToken"></param>
-        /// <param name="openID"></param>
-        /// <returns></returns>
+        /// <param name="appId">申请QQ登录成功后，分配给应用的appid</param>
+        /// <param name="accessToken">用户授权时获取到的AccessToken，access_token有3个月有效期。</param>
+        /// <param name="openID">用户的ID，与QQ号码一一对应。 </param>
+        /// <returns>QQ用户信息</returns>
         public static QQUserInfo GetUserInfo(string appId, string accessToken, string openID)
         {
             var url =

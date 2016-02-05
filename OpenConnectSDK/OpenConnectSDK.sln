@@ -7,14 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenConnectSDK", "OpenConne
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubFiles", "GitHubFiles", "{2EB91AC4-0560-43F8-B3C4-A548D0B85CE6}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
 		..\LICENSE.md = ..\LICENSE.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{F5CE828E-E251-4711-A0EA-4153E9E250E7}"
 	ProjectSection(SolutionItems) = preProject
-		nuget\OpenConnectSDK.nupkg = nuget\OpenConnectSDK.nupkg
-		nuget\OpenConnectSDK.nuspec = nuget\OpenConnectSDK.nuspec
+		..\nuget\OpenConnectSDK.nupkg = ..\nuget\OpenConnectSDK.nupkg
+		..\nuget\OpenConnectSDK.nuspec = ..\nuget\OpenConnectSDK.nuspec
 	EndProjectSection
 EndProject
 Global
