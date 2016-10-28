@@ -11,6 +11,9 @@ QQConnect and WeiboConnect SDK
 [![Downloads](https://img.shields.io/nuget/dt/OpenConnectSDK.svg)](https://www.nuget.org/packages/OpenConnectSDK/)
 
 -----------------
+v1.0.0 没有更新任何内容
+发布在nuget上已经有半年多，0.0.5版本已经有70多个下载，没有反馈任何问题，因此发布第一个稳定版本。并以此表示作者依然在关注和更新这个项目，如有问题请提交Issues。
+-----------------
 
 项目起源：工作中需要将网站接入QQ登录、微博登录和微信登录。但是QQ开放平台SDK的C#开源项目2012年已经停止维护，微博SDK的C#开源项目也处于瘫痪状态。所以发起了这个项目，希望能够长期维护一个QQ和微博接入的SDK。
 
